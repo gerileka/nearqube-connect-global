@@ -23,40 +23,42 @@ export function ServicesSection({ language }: ServicesSectionProps) {
   const t = translations[language]
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-secondary/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t.services.title}
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {t.services.subtitle}
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {t.services.items.map((service, index) => {
-            const IconComponent = serviceIcons[service.icon as keyof typeof serviceIcons]
-            
-            return (
-              <div
-                key={index}
-                className="service-card p-8 rounded-xl border border-border/50 hover:border-accent/30 group"
-              >
-                <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-6 group-hover:bg-accent/20 transition-colors">
-                  <IconComponent className="h-8 w-8 text-accent" />
+    <section className="section-spacing tech-section bg-secondary/50">
+      <div className="mobile-container">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 lg:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              {t.services.title}
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              {t.services.subtitle}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {t.services.items.map((service, index) => {
+              const IconComponent = serviceIcons[service.icon as keyof typeof serviceIcons]
+              
+              return (
+                <div
+                  key={index}
+                  className="service-card p-8 lg:p-10 rounded-2xl text-center group"
+                >
+                  <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/10 mb-8 mx-auto group-hover:bg-accent/20 transition-all duration-300">
+                    <IconComponent className="h-10 w-10 text-accent" />
+                  </div>
+                  
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4 leading-tight">
+                    {service.name}
+                  </h3>
+                  
+                  <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
+                    {service.description}
+                  </p>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-foreground mb-4">
-                  {service.name}
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

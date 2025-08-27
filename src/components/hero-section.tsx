@@ -28,26 +28,26 @@ export function HeroSection({ language }: HeroSectionProps) {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative z-20 mobile-container">
+        <div className="max-w-6xl mx-auto text-center">
           {/* Brand name */}
-          <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground mb-6 tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tight leading-tight">
             Near<span className="text-gradient">Qube</span>
           </h1>
           
           {/* Tagline */}
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
             {t.hero.tagline}
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16">
             <Button
               size="lg"
               onClick={handleCallNow}
-              className="cta-button bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-semibold flex items-center gap-3"
+              className="cta-button bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-bold shadow-2xl w-full sm:w-auto"
             >
-              <Phone className="h-5 w-5" />
+              <Phone className="h-5 w-5 mr-3" />
               {t.hero.callNow}
             </Button>
             
@@ -55,22 +55,22 @@ export function HeroSection({ language }: HeroSectionProps) {
               size="lg"
               variant="outline"
               onClick={handleContactForm}
-              className="cta-button border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-semibold flex items-center gap-3"
+              className="cta-button border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-4 text-lg font-bold backdrop-blur-sm w-full sm:w-auto"
             >
               {t.hero.contactForm}
-              <ArrowRight className="h-5 w-5" />
+              <ArrowRight className="h-5 w-5 ml-3" />
             </Button>
           </div>
           
           {/* Phone number display */}
-          <p className="text-primary-foreground/70 mt-8 text-sm">
+          <p className="text-white/70 text-base font-medium">
             {t.hero.phoneDisplay}: +33 6 62 48 15 30
           </p>
         </div>
       </div>
       
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
     </section>
   )
 }

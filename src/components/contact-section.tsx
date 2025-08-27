@@ -23,37 +23,37 @@ export function ContactSection({ language }: ContactSectionProps) {
   }
 
   return (
-    <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section className="section-spacing tech-section bg-gradient-to-b from-secondary/50 to-background">
+      <div className="mobile-container">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
             {t.contact.title}
           </h2>
           
-          <p className="text-xl text-muted-foreground mb-16 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-16 lg:mb-20 max-w-4xl mx-auto leading-relaxed">
             {t.contact.subtitle}
           </p>
           
           {/* Contact Methods */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16 lg:mb-20">
             {/* Phone */}
             <div 
               onClick={handlePhoneCall}
-              className="service-card p-8 rounded-xl border border-border/50 hover:border-accent/30 cursor-pointer group"
+              className="service-card p-8 lg:p-10 rounded-2xl border border-border/50 hover:border-accent/30 cursor-pointer group"
             >
-              <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-6 group-hover:bg-accent/20 transition-colors mx-auto">
-                <Phone className="h-8 w-8 text-accent" />
+              <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/10 mb-8 group-hover:bg-accent/20 transition-all duration-300 mx-auto">
+                <Phone className="h-10 w-10 text-accent" />
               </div>
               
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
                 {t.contact.phone.title}
               </h3>
               
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 {t.contact.phone.description}
               </p>
               
-              <p className="text-lg font-semibold text-accent">
+              <p className="text-lg lg:text-xl font-bold text-accent">
                 +33 6 62 48 15 30
               </p>
             </div>
@@ -61,43 +61,43 @@ export function ContactSection({ language }: ContactSectionProps) {
             {/* Email */}
             <div 
               onClick={handleEmail}
-              className="service-card p-8 rounded-xl border border-border/50 hover:border-accent/30 cursor-pointer group"
+              className="service-card p-8 lg:p-10 rounded-2xl border border-border/50 hover:border-accent/30 cursor-pointer group"
             >
-              <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-accent/10 mb-6 group-hover:bg-accent/20 transition-colors mx-auto">
-                <Mail className="h-8 w-8 text-accent" />
+              <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/10 mb-8 group-hover:bg-accent/20 transition-all duration-300 mx-auto">
+                <Mail className="h-10 w-10 text-accent" />
               </div>
               
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
                 {t.contact.email.title}
               </h3>
               
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 {t.contact.email.description}
               </p>
               
-              <p className="text-lg font-semibold text-accent">
+              <p className="text-lg lg:text-xl font-bold text-accent">
                 contact@nearqube.com
               </p>
             </div>
           </div>
           
           {/* Tally Form CTA */}
-          <div className="bg-card rounded-2xl p-12 border border-border/50">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+          <div className="service-card p-10 lg:p-16 rounded-3xl border border-border/50">
+            <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
               {t.contact.form.title}
             </h3>
             
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed text-lg">
               {t.contact.form.description}
             </p>
             
             <Button
               size="lg"
               onClick={handleTallyForm}
-              className="cta-button bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-semibold flex items-center gap-3"
+              className="cta-button bg-accent hover:bg-accent-dark text-accent-foreground px-10 py-4 text-lg font-bold shadow-2xl"
             >
               {t.contact.form.button}
-              <ExternalLink className="h-5 w-5" />
+              <ExternalLink className="h-6 w-6 ml-3" />
             </Button>
           </div>
         </div>

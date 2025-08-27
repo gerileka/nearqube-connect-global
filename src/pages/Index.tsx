@@ -4,6 +4,7 @@ import { HeroSection } from '@/components/hero-section'
 import { ServicesSection } from '@/components/services-section'
 import { AboutSection } from '@/components/about-section'
 import { ContactSection } from '@/components/contact-section'
+import { Phone, Mail } from 'lucide-react'
 
 const Index = () => {
   const [language, setLanguage] = useState<'en' | 'fr'>('en')
@@ -31,16 +32,24 @@ const Index = () => {
       <ContactSection language={language} />
       
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-12">
-        <div className="container mx-auto px-6 text-center">
-          <h3 className="text-2xl font-bold mb-4">NearQube</h3>
-          <p className="text-primary-foreground/80 mb-6">
-            Connecting businesses with skilled nearshore consultants
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
-            <span>📞 +33 6 62 48 15 30</span>
-            <span className="hidden sm:block">•</span>
-            <span>✉️ contact@nearqube.com</span>
+      <footer className="bg-primary text-primary-foreground py-16 lg:py-20 tech-section">
+        <div className="mobile-container">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-3xl lg:text-4xl font-bold mb-6">NearQube</h3>
+            <p className="text-primary-foreground/90 mb-10 text-lg lg:text-xl leading-relaxed">
+              Connecting businesses with skilled nearshore consultants
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center text-base lg:text-lg">
+              <span className="flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                +33 6 62 48 15 30
+              </span>
+              <span className="hidden sm:block text-primary-foreground/60">•</span>
+              <span className="flex items-center gap-2">
+                <Mail className="h-5 w-5" />
+                contact@nearqube.com
+              </span>
+            </div>
           </div>
         </div>
       </footer>
