@@ -25,12 +25,17 @@ export function ContactSection({ language }: ContactSectionProps) {
   return (
     <section className="section-spacing tech-section bg-gradient-to-b from-secondary/50 to-background">
       <div className="mobile-container">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-6">
+            <div className="inline-block px-6 py-3 rounded-full bg-accent/10 border border-accent/20 mb-8">
+              <span className="text-accent text-sm font-semibold tracking-wide uppercase">Get in Touch</span>
+            </div>
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground mb-8 leading-tight tracking-tight">
             {t.contact.title}
           </h2>
           
-          <p className="text-lg sm:text-xl text-muted-foreground mb-16 lg:mb-20 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-muted-foreground mb-20 lg:mb-24 max-w-5xl mx-auto leading-relaxed font-light">
             {t.contact.subtitle}
           </p>
           

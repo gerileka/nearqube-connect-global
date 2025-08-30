@@ -31,23 +31,28 @@ export function HeroSection({ language }: HeroSectionProps) {
       <div className="relative z-20 mobile-container">
         <div className="max-w-6xl mx-auto text-center">
           {/* Brand name */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tight leading-tight">
+          <div className="mb-6">
+            <div className="inline-block px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-8">
+              <span className="text-white/80 text-sm font-medium tracking-wide">PREMIUM CONSULTING SERVICES</span>
+            </div>
+          </div>
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white mb-8 tracking-tight leading-[0.9]">
             Near<span className="text-gradient">Qube</span>
           </h1>
           
           {/* Tagline */}
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl sm:text-2xl md:text-3xl text-white/90 mb-16 max-w-5xl mx-auto leading-relaxed font-light">
             {t.hero.tagline}
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 justify-center items-center mb-20">
             <Button
               size="lg"
               onClick={handleCallNow}
-              className="cta-button bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-bold shadow-2xl w-full sm:w-auto"
+              className="cta-button bg-white text-primary hover:bg-white/95 px-10 py-5 text-xl font-bold shadow-2xl w-full sm:w-auto rounded-2xl"
             >
-              <Phone className="h-5 w-5 mr-3" />
+              <Phone className="h-6 w-6 mr-4" />
               {t.hero.callNow}
             </Button>
             
@@ -55,17 +60,19 @@ export function HeroSection({ language }: HeroSectionProps) {
               size="lg"
               variant="outline"
               onClick={handleContactForm}
-              className="cta-button border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-4 text-lg font-bold backdrop-blur-sm w-full sm:w-auto"
+              className="cta-button border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/60 px-10 py-5 text-xl font-bold backdrop-blur-sm w-full sm:w-auto rounded-2xl"
             >
               {t.hero.contactForm}
-              <ArrowRight className="h-5 w-5 ml-3" />
+              <ArrowRight className="h-6 w-6 ml-4" />
             </Button>
           </div>
           
           {/* Phone number display */}
-          <p className="text-white/70 text-base font-medium">
-            {t.hero.phoneDisplay}: +33 6 62 48 15 30
-          </p>
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+            <p className="text-white/80 text-lg font-medium">
+              {t.hero.phoneDisplay}: <span className="text-white font-semibold">+33 6 62 48 15 30</span>
+            </p>
+          </div>
         </div>
       </div>
       

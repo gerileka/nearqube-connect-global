@@ -30,40 +30,49 @@ export function AboutSection({ language }: AboutSectionProps) {
     <section className="section-spacing bg-background">
       <div className="mobile-container">
         <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <div className="mb-6">
+              <div className="inline-block px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-8">
+                <span className="text-primary text-sm font-semibold tracking-wide uppercase">About Us</span>
+              </div>
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground mb-8 leading-tight tracking-tight">
+              {t.about.title}
+            </h2>
+            
+            <p className="text-xl sm:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto leading-relaxed font-light">
+              {t.about.description}
+            </p>
+            
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+              {t.about.mission}
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Content */}
+            {/* Content moved above */}
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
-                {t.about.title}
-              </h2>
-              
-              <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed font-medium">
-                {t.about.description}
-              </p>
-              
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                {t.about.mission}
-              </p>
+              {/* Content is now in centered section above */}
             </div>
             
-            {/* Features */}
-            <div className="order-1 lg:order-2 space-y-8 lg:space-y-10">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-6 group">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-accent/10 shrink-0 group-hover:bg-accent/20 transition-all duration-300">
-                    <feature.icon className="h-8 w-8 text-accent" />
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-3 leading-tight">
+            {/* Features Grid */}
+            <div className="col-span-full">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                {features.map((feature, index) => (
+                  <div key={index} className="service-card p-8 lg:p-10 rounded-3xl text-center group">
+                    <div className="flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-accent/10 to-primary/5 mb-8 mx-auto group-hover:from-accent/20 group-hover:to-primary/10 transition-all duration-500 shadow-lg">
+                      <feature.icon className="h-10 w-10 text-accent group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                    
+                    <h3 className="text-2xl lg:text-3xl font-black text-foreground mb-4 leading-tight tracking-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-lg">
                       {feature.description}
                     </p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

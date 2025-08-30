@@ -25,34 +25,38 @@ export function ServicesSection({ language }: ServicesSectionProps) {
   return (
     <section className="section-spacing tech-section bg-secondary/50">
       <div className="mobile-container">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 lg:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              {t.services.title}
-            </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              {t.services.subtitle}
-            </p>
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-6">
+            <div className="inline-block px-6 py-3 rounded-full bg-accent/10 border border-accent/20 mb-8">
+              <span className="text-accent text-sm font-semibold tracking-wide uppercase">Our Expertise</span>
+            </div>
           </div>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground mb-8 leading-tight tracking-tight">
+            {t.services.title}
+          </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <p className="text-xl sm:text-2xl text-muted-foreground mb-20 lg:mb-24 max-w-5xl mx-auto leading-relaxed font-light">
+            {t.services.subtitle}
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {t.services.items.map((service, index) => {
               const IconComponent = serviceIcons[service.icon as keyof typeof serviceIcons]
               
               return (
                 <div
                   key={index}
-                  className="service-card p-8 lg:p-10 rounded-2xl text-center group"
+                  className="service-card p-10 lg:p-12 rounded-3xl border border-border/50 hover:border-accent/30 group text-center"
                 >
-                  <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/10 mb-8 mx-auto group-hover:bg-accent/20 transition-all duration-300">
-                    <IconComponent className="h-10 w-10 text-accent" />
+                  <div className="flex items-center justify-center w-24 h-24 rounded-3xl bg-gradient-to-br from-accent/10 to-primary/5 mb-10 group-hover:from-accent/20 group-hover:to-primary/10 transition-all duration-500 mx-auto shadow-lg">
+                    <IconComponent className="h-12 w-12 text-accent group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   
-                  <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4 leading-tight">
+                  <h3 className="text-2xl lg:text-3xl font-black text-foreground mb-6 leading-tight tracking-tight">
                     {service.name}
                   </h3>
                   
-                  <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
+                  <p className="text-muted-foreground leading-relaxed text-lg">
                     {service.description}
                   </p>
                 </div>
