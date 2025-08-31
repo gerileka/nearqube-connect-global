@@ -13,9 +13,6 @@ export function HeroSection({ language }: HeroSectionProps) {
 
   const handleCallNow = () => {
     setShowPhone(true)
-    setTimeout(() => {
-      window.open('tel:+33662481530', '_self')
-    }, 1000)
   }
 
   const handleContactForm = () => {
@@ -78,29 +75,62 @@ export function HeroSection({ language }: HeroSectionProps) {
                 </Button>
               </div>
               
-              {/* Phone Display - only show when call button is clicked */}
-              {showPhone && (
-                <div className="inline-flex items-center px-6 py-3 rounded-full bg-secondary/50 border border-border backdrop-blur-sm animate-fade-in">
-                  <p className="text-muted-foreground text-base">
-                    {t.hero.phoneDisplay}: <span className="text-foreground font-semibold">+33 6 62 48 15 30</span>
-                  </p>
-                </div>
-              )}
+              {/* Contact Options - Clear and Accessible */}
+              <div className="space-y-4">
+                {showPhone ? (
+                  <div className="animate-fade-in space-y-3">
+                    <div className="inline-flex items-center px-6 py-3 rounded-2xl bg-primary/10 border border-primary/20 backdrop-blur-sm">
+                      <p className="text-foreground text-base font-medium">
+                        📞 <span className="font-bold">+33 6 62 48 15 30</span>
+                      </p>
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Ou utilisez le formulaire de contact ci-dessous
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-sm text-muted-foreground">
+                    Cliquez sur "Appeler" pour voir le numéro ou utilisez le formulaire
+                  </div>
+                )}
+              </div>
             </div>
             
-            {/* Right Content - GPU Image */}
+            {/* Right Content - Tech Visual */}
             <div className="relative flex items-center justify-center lg:justify-end">
               <div className="relative">
-                <img 
-                  src="/lovable-uploads/e31e26bb-39ec-4c16-81b9-7a1a3cecc6bd.png"
-                  alt="High-performance GPU for AI computing"
-                  className="w-80 h-60 lg:w-96 lg:h-72 object-contain filter drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
-                />
+                {/* Modern Tech Grid */}
+                <div className="relative w-80 h-60 lg:w-96 lg:h-72">
+                  {/* Main Container */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-secondary rounded-3xl shadow-2xl border border-border/50 backdrop-blur-xl">
+                    {/* Tech Grid Pattern */}
+                    <div className="absolute inset-4 grid grid-cols-6 grid-rows-4 gap-2">
+                      {[...Array(24)].map((_, i) => (
+                        <div
+                          key={i}
+                          className={`rounded-lg ${
+                            i % 7 === 0 ? 'bg-primary/20' : 
+                            i % 5 === 0 ? 'bg-accent/15' : 
+                            'bg-muted/60'
+                          } animate-pulse`}
+                          style={{
+                            animationDelay: `${i * 0.1}s`,
+                            animationDuration: '2s'
+                          }}
+                        />
+                      ))}
+                    </div>
+                    
+                    {/* Central Glow */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/30 rounded-full blur-xl"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-primary/50 rounded-full"></div>
+                  </div>
+                </div>
                 
-                {/* Floating tech elements around GPU */}
-                <div className="absolute -top-8 -left-8 w-4 h-4 bg-primary/20 rounded-full animate-pulse"></div>
-                <div className="absolute -bottom-6 -right-6 w-6 h-6 bg-accent/30 rounded-full animate-pulse delay-1000"></div>
-                <div className="absolute top-1/2 -right-12 w-3 h-3 bg-primary/40 rounded-full animate-pulse delay-500"></div>
+                {/* Floating tech elements */}
+                <div className="absolute -top-6 -left-6 w-3 h-3 bg-primary/40 rounded-full animate-pulse"></div>
+                <div className="absolute -bottom-4 -right-4 w-4 h-4 bg-accent/50 rounded-full animate-pulse delay-1000"></div>
+                <div className="absolute top-1/3 -right-8 w-2 h-2 bg-primary/60 rounded-full animate-pulse delay-500"></div>
               </div>
             </div>
             
