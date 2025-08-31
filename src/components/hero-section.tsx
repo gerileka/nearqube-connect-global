@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Phone, ArrowRight } from "lucide-react"
 import { translations } from "@/lib/translations"
@@ -8,9 +9,13 @@ interface HeroSectionProps {
 
 export function HeroSection({ language }: HeroSectionProps) {
   const t = translations[language]
+  const [showPhone, setShowPhone] = useState(false)
 
   const handleCallNow = () => {
-    window.open('tel:+33662481530', '_self')
+    setShowPhone(true)
+    setTimeout(() => {
+      window.open('tel:+33662481530', '_self')
+    }, 1000)
   }
 
   const handleContactForm = () => {
@@ -73,51 +78,26 @@ export function HeroSection({ language }: HeroSectionProps) {
                 </Button>
               </div>
               
-              {/* Phone Display */}
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-secondary/50 border border-border backdrop-blur-sm">
-                <p className="text-muted-foreground text-base">
-                  {t.hero.phoneDisplay}: <span className="text-foreground font-semibold">+33 6 62 48 15 30</span>
-                </p>
-              </div>
+              {/* Phone Display - only show when call button is clicked */}
+              {showPhone && (
+                <div className="inline-flex items-center px-6 py-3 rounded-full bg-secondary/50 border border-border backdrop-blur-sm animate-fade-in">
+                  <p className="text-muted-foreground text-base">
+                    {t.hero.phoneDisplay}: <span className="text-foreground font-semibold">+33 6 62 48 15 30</span>
+                  </p>
+                </div>
+              )}
             </div>
             
-            {/* Right Content - GPU Visual */}
+            {/* Right Content - GPU Image */}
             <div className="relative flex items-center justify-center lg:justify-end">
               <div className="relative">
-                {/* GPU-like 3D Shape */}
-                <div className="relative w-80 h-60 lg:w-96 lg:h-72">
-                  {/* Main GPU Body */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-muted/80 to-muted-foreground/10 rounded-2xl shadow-2xl transform rotate-12 border border-border"></div>
-                  
-                  {/* Fan Circle */}
-                  <div className="absolute top-8 right-8 w-32 h-32 lg:w-40 lg:h-40 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full border-2 border-border shadow-xl flex items-center justify-center">
-                    {/* Fan Blades */}
-                    <div className="w-20 h-20 lg:w-24 lg:h-24 relative">
-                      <div className="absolute inset-0 bg-primary/30 rounded-full"></div>
-                      {[...Array(6)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="absolute w-1 h-8 lg:h-10 bg-primary/40 rounded-full"
-                          style={{
-                            transformOrigin: '50% 100%',
-                            transform: `rotate(${i * 60}deg) translateY(-50%)`,
-                            top: '50%',
-                            left: '50%'
-                          }}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Heat Sink Lines */}
-                  <div className="absolute bottom-4 left-4 space-y-1">
-                    {[...Array(8)].map((_, i) => (
-                      <div key={i} className="h-0.5 bg-border rounded-full" style={{ width: `${60 + i * 8}px` }} />
-                    ))}
-                  </div>
-                </div>
+                <img 
+                  src="/lovable-uploads/e31e26bb-39ec-4c16-81b9-7a1a3cecc6bd.png"
+                  alt="High-performance GPU for AI computing"
+                  className="w-80 h-60 lg:w-96 lg:h-72 object-contain filter drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                />
                 
-                {/* Floating elements around GPU */}
+                {/* Floating tech elements around GPU */}
                 <div className="absolute -top-8 -left-8 w-4 h-4 bg-primary/20 rounded-full animate-pulse"></div>
                 <div className="absolute -bottom-6 -right-6 w-6 h-6 bg-accent/30 rounded-full animate-pulse delay-1000"></div>
                 <div className="absolute top-1/2 -right-12 w-3 h-3 bg-primary/40 rounded-full animate-pulse delay-500"></div>
