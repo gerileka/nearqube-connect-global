@@ -49,6 +49,10 @@ export default {
 					foreground: 'hsl(var(--accent-foreground))',
 					light: 'hsl(var(--accent-light))'
 				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'

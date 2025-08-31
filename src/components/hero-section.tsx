@@ -110,7 +110,8 @@ export function HeroSection({ language }: HeroSectionProps) {
                           key={i}
                           className={`rounded-lg ${
                             i % 7 === 0 ? 'bg-primary/20' : 
-                            i % 5 === 0 ? 'bg-accent/15' : 
+                            i % 5 === 0 ? 'bg-accent/20' : 
+                            i % 3 === 0 ? 'bg-warning/20' :
                             'bg-muted/60'
                           } animate-pulse`}
                           style={{
@@ -122,8 +123,8 @@ export function HeroSection({ language }: HeroSectionProps) {
                     </div>
                     
                     {/* Central Glow */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/30 rounded-full blur-xl"></div>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-primary/50 rounded-full"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/20 rounded-full blur-xl"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-accent/30 rounded-full"></div>
                   </div>
                 </div>
                 
