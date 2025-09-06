@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Phone, ArrowRight } from "lucide-react"
+import { Phone, Mail } from "lucide-react"
 import { translations } from "@/lib/translations"
 
 interface HeroSectionProps {
@@ -15,9 +15,8 @@ export function HeroSection({ language }: HeroSectionProps) {
     setShowPhone(true)
   }
 
-  const handleContactForm = () => {
-    // Will be updated with Tally URL later
-    console.log('Redirect to Tally form')
+  const handleSendEmail = () => {
+    window.location.href = 'mailto:contact@nearqube.com?subject=Consulting Inquiry&body=Hello, I am interested in your consulting services. Please contact me to discuss my project requirements.'
   }
 
   return (
@@ -67,11 +66,11 @@ export function HeroSection({ language }: HeroSectionProps) {
                 <Button
                   size="lg"
                   variant="outline"
-                  onClick={handleContactForm}
+                  onClick={handleSendEmail}
                   className="cta-button border-2 border-border text-foreground hover:bg-secondary px-8 py-4 text-lg font-bold rounded-xl"
                 >
-                  {t.hero.contactForm}
-                  <ArrowRight className="h-5 w-5 ml-3" />
+                  <Mail className="h-5 w-5 mr-3" />
+                  {language === 'en' ? 'Send Email' : 'Envoyer Email'}
                 </Button>
               </div>
               
@@ -85,12 +84,12 @@ export function HeroSection({ language }: HeroSectionProps) {
                       </p>
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      Ou utilisez le formulaire de contact ci-dessous
+                      {language === 'en' ? 'Or send us an email directly' : 'Ou envoyez-nous un email directement'}
                     </div>
                   </div>
                 ) : (
                   <div className="text-sm text-muted-foreground">
-                    Cliquez sur "Appeler" pour voir le numéro ou utilisez le formulaire
+                    {language === 'en' ? 'Click "Call Now" to see number or send us an email' : 'Cliquez sur "Appeler" pour voir le numéro ou envoyez un email'}
                   </div>
                 )}
               </div>
