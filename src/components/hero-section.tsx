@@ -2,7 +2,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Phone, ArrowRight } from "lucide-react"
 import { translations } from "@/lib/translations"
-import nearqubeLogo from "@/assets/nearqube-logo.png"
 
 interface HeroSectionProps {
   language: 'en' | 'fr'
@@ -44,17 +43,10 @@ export function HeroSection({ language }: HeroSectionProps) {
                 </div>
               </div>
               
-              {/* Main Heading with Logo */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mb-6">
-                <img 
-                  src={nearqubeLogo} 
-                  alt="NearQube Logo" 
-                  className="w-16 h-16 sm:w-20 sm:h-20"
-                />
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-foreground tracking-tight leading-[0.9]">
-                  Near<span className="text-gradient">Qube</span>
-                </h1>
-              </div>
+              {/* Main Heading */}
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-foreground mb-6 tracking-tight leading-[0.9]">
+                Near<span className="text-gradient">Qube</span>
+              </h1>
               
               {/* Tagline */}
               <p className="text-xl sm:text-2xl text-muted-foreground mb-12 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
