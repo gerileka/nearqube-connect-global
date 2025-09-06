@@ -15,8 +15,14 @@ export function HeroSection({ language }: HeroSectionProps) {
     setShowPhone(true)
   }
 
-  const handleSendEmail = () => {
-    window.location.href = 'mailto:contact@nearqube.com?subject=Consulting Inquiry&body=Hello, I am interested in your consulting services. Please contact me to discuss my project requirements.'
+  const handleCopyEmail = async () => {
+    await navigator.clipboard.writeText('contact@nearqube.com')
+    // Could add a toast notification here
+  }
+
+  const handleCopyPhone = async () => {
+    await navigator.clipboard.writeText('+33 6 62 48 15 30')
+    // Could add a toast notification here
   }
 
   return (
@@ -56,42 +62,41 @@ export function HeroSection({ language }: HeroSectionProps) {
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start mb-12">
                 <Button
                   size="lg"
-                  onClick={handleCallNow}
+                  onClick={handleCopyPhone}
                   className="cta-button bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-bold shadow-xl rounded-xl"
                 >
                   <Phone className="h-5 w-5 mr-3" />
-                  {t.hero.callNow}
+                  {language === 'en' ? 'Copy Phone' : 'Copier Numéro'}
                 </Button>
                 
                 <Button
                   size="lg"
                   variant="outline"
-                  onClick={handleSendEmail}
+                  onClick={handleCopyEmail}
                   className="cta-button border-2 border-border text-foreground hover:bg-secondary px-8 py-4 text-lg font-bold rounded-xl"
                 >
                   <Mail className="h-5 w-5 mr-3" />
-                  {language === 'en' ? 'Send Email' : 'Envoyer Email'}
+                  {language === 'en' ? 'Copy Email' : 'Copier Email'}
                 </Button>
               </div>
               
-              {/* Contact Options - Clear and Accessible */}
+              {/* Contact Info Display */}
               <div className="space-y-4">
-                {showPhone ? (
-                  <div className="animate-fade-in space-y-3">
-                    <div className="inline-flex items-center px-6 py-3 rounded-2xl bg-primary/10 border border-primary/20 backdrop-blur-sm">
-                      <p className="text-foreground text-base font-medium">
-                        📞 <span className="font-bold">+33 6 62 48 15 30</span>
-                      </p>
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      {language === 'en' ? 'Or send us an email directly' : 'Ou envoyez-nous un email directement'}
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="inline-flex items-center px-6 py-3 rounded-2xl bg-primary/10 border border-primary/20 backdrop-blur-sm">
+                    <p className="text-foreground text-base font-medium">
+                      📞 <span className="font-bold">+33 6 62 48 15 30</span>
+                    </p>
                   </div>
-                ) : (
-                  <div className="text-sm text-muted-foreground">
-                    {language === 'en' ? 'Click "Call Now" to see number or send us an email' : 'Cliquez sur "Appeler" pour voir le numéro ou envoyez un email'}
+                  <div className="inline-flex items-center px-6 py-3 rounded-2xl bg-accent/10 border border-accent/20 backdrop-blur-sm">
+                    <p className="text-foreground text-base font-medium">
+                      ✉️ <span className="font-bold">contact@nearqube.com</span>
+                    </p>
                   </div>
-                )}
+                </div>
+                <div className="text-sm text-muted-foreground text-center">
+                  {language === 'en' ? 'Click buttons above to copy contact information' : 'Cliquez sur les boutons pour copier les informations de contact'}
+                </div>
               </div>
             </div>
             
