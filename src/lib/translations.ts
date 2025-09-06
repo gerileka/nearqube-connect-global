@@ -34,6 +34,11 @@ export const translations = {
           icon: "cloud",
           name: "Cloud Solutions",
           description: "Cloud migration, architecture design, and DevOps implementation across major cloud platforms."
+        },
+        {
+          icon: "security",
+          name: "Cybersecurity",
+          description: "Security assessments, compliance implementation, and threat protection for your digital infrastructure."
         }
       ]
     },
@@ -109,6 +114,11 @@ export const translations = {
           icon: "cloud",
           name: "Solutions Cloud",
           description: "Migration cloud, conception d'architecture et implémentation DevOps sur les principales plateformes cloud."
+        },
+        {
+          icon: "security",
+          name: "Cybersécurité",
+          description: "Évaluations de sécurité, mise en conformité et protection contre les menaces pour votre infrastructure numérique."
         }
       ]
     },

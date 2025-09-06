@@ -3,7 +3,8 @@ import {
   Database, 
   BarChart3, 
   Cloud, 
-  Settings 
+  Settings,
+  Shield 
 } from "lucide-react"
 import { translations } from "@/lib/translations"
 
@@ -16,7 +17,8 @@ const serviceIcons = {
   sap: Settings,
   data: BarChart3,
   software: Code,
-  cloud: Cloud
+  cloud: Cloud,
+  security: Shield
 }
 
 export function ServicesSection({ language }: ServicesSectionProps) {
