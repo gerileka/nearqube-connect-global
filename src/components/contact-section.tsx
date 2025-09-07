@@ -88,9 +88,9 @@ export function ContactSection({ language }: ContactSectionProps) {
           
           {/* Success Story */}
           <div className="service-card p-10 lg:p-16 rounded-3xl border border-border/50 bg-gradient-to-br from-accent/5 to-accent/10">
-            <div className="flex items-center mb-8">
-              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mr-6">
-                <span className="text-2xl font-bold text-accent">LT</span>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left mb-8">
+              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 flex-shrink-0">
+                <span className="text-2xl font-bold text-accent">LD</span>
               </div>
               <div>
                 <h4 className="text-xl font-bold text-foreground">Laurent Dubois</h4>
@@ -98,22 +98,22 @@ export function ContactSection({ language }: ContactSectionProps) {
               </div>
             </div>
             
-            <blockquote className="text-xl lg:text-2xl text-foreground mb-8 leading-relaxed italic">
+            <blockquote className="text-lg sm:text-xl lg:text-2xl text-foreground mb-8 leading-relaxed italic text-center sm:text-left">
               "NearQube helped us optimize our SAP infrastructure and reduce operational costs by 35% within 6 months. Their expertise in S/4HANA migration was exceptional."
             </blockquote>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
               <div className="p-4 rounded-xl bg-background/50">
-                <div className="text-3xl font-bold text-accent mb-2">35%</div>
-                <div className="text-sm text-muted-foreground">Cost Reduction</div>
+                <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">35%</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Cost Reduction</div>
               </div>
               <div className="p-4 rounded-xl bg-background/50">
-                <div className="text-3xl font-bold text-accent mb-2">6</div>
-                <div className="text-sm text-muted-foreground">Months Timeline</div>
+                <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">6</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Months Timeline</div>
               </div>
               <div className="p-4 rounded-xl bg-background/50">
-                <div className="text-3xl font-bold text-accent mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">System Uptime</div>
+                <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">24/7</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">System Uptime</div>
               </div>
             </div>
           </div>
