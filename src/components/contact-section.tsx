@@ -89,17 +89,17 @@ export function ContactSection({ language }: ContactSectionProps) {
           {/* Success Story */}
           <div className="service-card p-10 lg:p-16 rounded-3xl border border-border/50 bg-gradient-to-br from-accent/5 to-accent/10">
             <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left mb-8">
-              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 flex-shrink-0">
-                <span className="text-2xl font-bold text-accent">LD</span>
+              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 flex-shrink-0 animate-pulse">
+                <div className="w-8 h-8 rounded-full bg-accent/40"></div>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-foreground">Laurent Dubois</h4>
-                <p className="text-muted-foreground">SAP Operations Manager, TechCorp Solutions</p>
+                <h4 className="text-xl font-bold text-foreground">Laurent D.</h4>
+                <p className="text-muted-foreground">SAP Operations Manager</p>
               </div>
             </div>
             
             <blockquote className="text-lg sm:text-xl lg:text-2xl text-foreground mb-8 leading-relaxed italic text-center sm:text-left">
-              "NearQube helped us optimize our SAP infrastructure and reduce operational costs by 35% within 6 months. Their expertise in S/4HANA migration was exceptional."
+              "Working with NearQube's nearshore consultants was a game-changer. We reduced costs by 35% while maintaining the same high-quality expertise. Their SAP specialists delivered exceptional results at a fraction of the cost."
             </blockquote>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
