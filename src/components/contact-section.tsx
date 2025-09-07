@@ -86,24 +86,36 @@ export function ContactSection({ language }: ContactSectionProps) {
             </div>
           </div>
           
-          {/* Tally Form CTA */}
-          <div className="service-card p-10 lg:p-16 rounded-3xl border border-border/50">
-            <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-              {t.contact.form.title}
-            </h3>
+          {/* Success Story */}
+          <div className="service-card p-10 lg:p-16 rounded-3xl border border-border/50 bg-gradient-to-br from-accent/5 to-accent/10">
+            <div className="flex items-center mb-8">
+              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mr-6">
+                <span className="text-2xl font-bold text-accent">LT</span>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold text-foreground">Laurent Dubois</h4>
+                <p className="text-muted-foreground">SAP Operations Manager, TechCorp Solutions</p>
+              </div>
+            </div>
             
-            <p className="text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed text-lg">
-              {t.contact.form.description}
-            </p>
+            <blockquote className="text-xl lg:text-2xl text-foreground mb-8 leading-relaxed italic">
+              "NearQube helped us optimize our SAP infrastructure and reduce operational costs by 35% within 6 months. Their expertise in S/4HANA migration was exceptional."
+            </blockquote>
             
-            <Button
-              size="lg"
-              onClick={handleTallyForm}
-              className="cta-button bg-accent hover:bg-accent-dark text-accent-foreground px-10 py-4 text-lg font-bold shadow-2xl"
-            >
-              {t.contact.form.button}
-              <ExternalLink className="h-6 w-6 ml-3" />
-            </Button>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="p-4 rounded-xl bg-background/50">
+                <div className="text-3xl font-bold text-accent mb-2">35%</div>
+                <div className="text-sm text-muted-foreground">Cost Reduction</div>
+              </div>
+              <div className="p-4 rounded-xl bg-background/50">
+                <div className="text-3xl font-bold text-accent mb-2">6</div>
+                <div className="text-sm text-muted-foreground">Months Timeline</div>
+              </div>
+              <div className="p-4 rounded-xl bg-background/50">
+                <div className="text-3xl font-bold text-accent mb-2">24/7</div>
+                <div className="text-sm text-muted-foreground">System Uptime</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
