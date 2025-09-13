@@ -23,7 +23,7 @@ export function ContactSection({ language }: ContactSectionProps) {
   }
 
   return (
-    <section className="section-spacing tech-section bg-gradient-to-b from-secondary/50 to-background">
+    <section className="section-spacing tech-section bg-gradient-to-b from-secondary/50 to-background" id="contact">
       <div className="mobile-container">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-6">
@@ -123,7 +123,7 @@ export function ContactSection({ language }: ContactSectionProps) {
                   <div className="w-6 h-6 rounded-full bg-accent/40"></div>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-foreground">Marie C.</h4>
+                  <h4 className="text-lg font-bold text-foreground">Marco R.</h4>
                   <p className="text-sm text-muted-foreground">IT Director</p>
                 </div>
               </div>
@@ -151,10 +151,10 @@ export function ContactSection({ language }: ContactSectionProps) {
               <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 flex-shrink-0 animate-pulse">
                 <div className="w-8 h-8 rounded-full bg-accent/40"></div>
               </div>
-              <div>
-                <h4 className="text-xl font-bold text-foreground">Thomas R.</h4>
-                <p className="text-muted-foreground">CTO</p>
-              </div>
+                <div>
+                  <h4 className="text-xl font-bold text-foreground">Klaus M.</h4>
+                  <p className="text-muted-foreground">CTO</p>
+                </div>
             </div>
             
             <blockquote className="text-lg sm:text-xl lg:text-2xl text-foreground mb-8 leading-relaxed italic text-center sm:text-left">

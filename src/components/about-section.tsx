@@ -27,7 +27,7 @@ export function AboutSection({ language }: AboutSectionProps) {
   ]
 
   return (
-    <section className="section-spacing bg-background">
+    <section className="section-spacing bg-background" id="about">
       <div className="mobile-container">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">

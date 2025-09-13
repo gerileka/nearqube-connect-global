@@ -25,7 +25,7 @@ export function ServicesSection({ language }: ServicesSectionProps) {
   const t = translations[language]
 
   return (
-    <section className="section-spacing tech-section bg-secondary/50">
+    <section className="section-spacing tech-section bg-secondary/50" id="services">
       <div className="mobile-container">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-6">

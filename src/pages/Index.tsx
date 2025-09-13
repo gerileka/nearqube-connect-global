@@ -20,16 +20,18 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <HeroSection language={language} />
-      
-      {/* Services Section */}
-      <ServicesSection language={language} />
-      
-      {/* About Section */}
-      <AboutSection language={language} />
-      
-      {/* Contact Section */}
-      <ContactSection language={language} />
+      <main>
+        <HeroSection language={language} />
+        
+        {/* Services Section */}
+        <ServicesSection language={language} />
+        
+        {/* About Section */}
+        <AboutSection language={language} />
+        
+        {/* Contact Section */}
+        <ContactSection language={language} />
+      </main>
       
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-16 lg:py-20 tech-section">
