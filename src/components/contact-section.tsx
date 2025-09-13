@@ -86,34 +86,93 @@ export function ContactSection({ language }: ContactSectionProps) {
             </div>
           </div>
           
-          {/* Success Story */}
+          {/* Success Stories */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Story 1 */}
+            <div className="service-card p-8 lg:p-10 rounded-3xl border border-border/50 bg-gradient-to-br from-accent/5 to-accent/10">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left mb-6">
+                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-4 sm:mb-0 sm:mr-4 flex-shrink-0 animate-pulse">
+                  <div className="w-6 h-6 rounded-full bg-accent/40"></div>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-foreground">Laurent D.</h4>
+                  <p className="text-sm text-muted-foreground">SAP Operations Manager</p>
+                </div>
+              </div>
+              
+              <blockquote className="text-base lg:text-lg text-foreground mb-6 leading-relaxed italic">
+                "Working with NearQube's nearshore consultants was a game-changer. We reduced costs by 35% while maintaining the same high-quality expertise."
+              </blockquote>
+              
+              <div className="grid grid-cols-2 gap-3 text-center">
+                <div className="p-3 rounded-lg bg-background/50">
+                  <div className="text-xl font-bold text-accent mb-1">35%</div>
+                  <div className="text-xs text-muted-foreground">Cost Reduction</div>
+                </div>
+                <div className="p-3 rounded-lg bg-background/50">
+                  <div className="text-xl font-bold text-accent mb-1">6mo</div>
+                  <div className="text-xs text-muted-foreground">Timeline</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Story 2 */}
+            <div className="service-card p-8 lg:p-10 rounded-3xl border border-border/50 bg-gradient-to-br from-accent/5 to-accent/10">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left mb-6">
+                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-4 sm:mb-0 sm:mr-4 flex-shrink-0 animate-pulse">
+                  <div className="w-6 h-6 rounded-full bg-accent/40"></div>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-foreground">Marie C.</h4>
+                  <p className="text-sm text-muted-foreground">IT Director</p>
+                </div>
+              </div>
+              
+              <blockquote className="text-base lg:text-lg text-foreground mb-6 leading-relaxed italic">
+                "The nearshore team's expertise exceeded our expectations. We saved 40% on consulting fees without compromising on delivery quality or timelines."
+              </blockquote>
+              
+              <div className="grid grid-cols-2 gap-3 text-center">
+                <div className="p-3 rounded-lg bg-background/50">
+                  <div className="text-xl font-bold text-accent mb-1">40%</div>
+                  <div className="text-xs text-muted-foreground">Savings</div>
+                </div>
+                <div className="p-3 rounded-lg bg-background/50">
+                  <div className="text-xl font-bold text-accent mb-1">3mo</div>
+                  <div className="text-xs text-muted-foreground">Delivery</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Story 3 - Featured */}
           <div className="service-card p-10 lg:p-16 rounded-3xl border border-border/50 bg-gradient-to-br from-accent/5 to-accent/10">
             <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left mb-8">
               <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 flex-shrink-0 animate-pulse">
                 <div className="w-8 h-8 rounded-full bg-accent/40"></div>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-foreground">Laurent D.</h4>
-                <p className="text-muted-foreground">SAP Operations Manager</p>
+                <h4 className="text-xl font-bold text-foreground">Thomas R.</h4>
+                <p className="text-muted-foreground">CTO</p>
               </div>
             </div>
             
             <blockquote className="text-lg sm:text-xl lg:text-2xl text-foreground mb-8 leading-relaxed italic text-center sm:text-left">
-              "Working with NearQube's nearshore consultants was a game-changer. We reduced costs by 35% while maintaining the same high-quality expertise. Their SAP specialists delivered exceptional results at a fraction of the cost."
+              "NearQube's nearshore consultants brought enterprise-level expertise at startup-friendly prices. We achieved a 45% cost reduction while accelerating our digital transformation by 2x."
             </blockquote>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
               <div className="p-4 rounded-xl bg-background/50">
-                <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">35%</div>
+                <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">45%</div>
                 <div className="text-xs sm:text-sm text-muted-foreground">Cost Reduction</div>
               </div>
               <div className="p-4 rounded-xl bg-background/50">
-                <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">6</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Months Timeline</div>
+                <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">2x</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Faster Delivery</div>
               </div>
               <div className="p-4 rounded-xl bg-background/50">
-                <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">24/7</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">System Uptime</div>
+                <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">100%</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Satisfaction</div>
               </div>
             </div>
           </div>
